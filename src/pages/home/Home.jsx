@@ -2,17 +2,17 @@ import React from 'react'
 
 import {Link} from 'react-router-dom'
 
-import Helmet from '../components/Helmet'
-import HeroSlider from '../components/heroSlider/HeroSlider'
-import Section, {SectionTitle, SectionBody} from '../components/section/Section'
-import PolicyCard from '../components/policyCard/PolicyCard'
-import Grid from '../components/Grid'
+import Helmet from '../../components/Helmet'
+import HeroSlider from '../../components/heroSlider/HeroSlider'
+import Section, {SectionTitle, SectionBody} from '../../components/section/Section'
+import PolicyCard from '../../components/policyCard/PolicyCard'
+import Grid from '../../components/Grid'
 
-import heroSliderData from '../assets/fake-data/hero-slider'
-import policy from '../assets/fake-data/policy'
-import productData from '../assets/fake-data/products'
-import ProductCard from '../components/productCard/ProductCard'
-import banner from '../assets/images/banner.png'
+import heroSliderData from '../../assets/fake-data/hero-slider'
+import policy from '../../assets/fake-data/policy'
+import productData from '../../assets/fake-data/products'
+import ProductCard from '../../components/productCard/ProductCard'
+import banner from '../../assets/images/banner.png'
 const Home = () => {
   return (
     <Helmet title = "Trang chủ">

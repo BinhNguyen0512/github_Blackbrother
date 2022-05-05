@@ -18,7 +18,7 @@ const Button = props => {
         {
             props.icon ? (
                 <span className="btn__icon">
-                    <i className={`${props.icon} bx-tada`}></i>
+                    <i className={`${props.icon}`}></i>
                 </span>
             ) : null
             
