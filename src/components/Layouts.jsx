@@ -1,9 +1,9 @@
-
+import React from 'react'
 import {BrowserRouter as Router} from 'react-router-dom'
 
-import Header from './Header'
+import Header from './header/Header'
 import Routes1 from '../routes/Routes1'
-import Footer from './Footer'
+import Footer from './footer/Footer'
 
 const Layouts = () => {
 
@@ -18,7 +18,6 @@ const Layouts = () => {
                 </div>
                 <Footer/>
             </div>
-
         </Router>
     )
 
