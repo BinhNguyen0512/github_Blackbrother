@@ -69,7 +69,7 @@ const Footer = () => {
 
                 <div>
                     <div className="footer__title">
-                        <h4> Về Yolo</h4>
+                        <h4> Về MISSOUT</h4>
                     </div>
 
                     <div className="footer__content">
