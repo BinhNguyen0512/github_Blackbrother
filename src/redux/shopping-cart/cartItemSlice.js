@@ -60,7 +60,32 @@ export const cartItemSlice = createSlice({
             // Nếu chưa có thì thêm newItem đó vào giỏ hàng, id sẽ lấy id product cuối cùng + 1
         },
         updateItem: (state, action) => {
-            
+            const itemUpdate = action.payload
+
+            const item = findItem(state.value, itemUpdate)
+
+            if( item.length > 0)
+            {
+                state.value = delItem(state.value, itemUpdate)
+
+                state.value =[
+                    ...state.value, {
+                        ...itemUpdate,
+                        id: item[0].id
+                    }
+                ]
+
+
+            }
+
+            localStorage.setItem('cartItems1', JSON.stringify(sortItems(state.value)))
+        },
+        deleteItem: (state, action) => {
+            const itemDelete = action.payload
+
+            state.value = delItem(state.value, itemDelete)
+
+            localStorage.setItem('cartItems1', JSON.stringify(sortItems(state.value)))
         }
 
     }
@@ -79,6 +104,6 @@ const sortItems = arr => arr.sort( (a, b) => a.id > b.id ? 1 : (a.id < b.id ? -1
 
 const {actions, reducer} = cartItemSlice
 
-export const {addItem} = actions
+export const {addItem, updateItem, deleteItem} = actions
 
 export default reducer

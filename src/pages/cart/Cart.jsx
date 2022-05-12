@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 
 import Helmet from '../../components/Helmet'
 import Button from '../../components/button/Button'
+import CartItem from '../../components/cartItem/CartItem'
 
 
 import productData from '../../assets/fake-data/products'
@@ -62,6 +63,17 @@ const Cart = () => {
               </Button>
             </Link>
           </div>
+        </div>
+
+        <div className="cart__list">
+          {
+            cartProducts.map((item, index) => (
+              <CartItem 
+                key={index} 
+                item= {item}
+              /> 
+            ))
+          }
         </div>
       </div>
     </Helmet>
