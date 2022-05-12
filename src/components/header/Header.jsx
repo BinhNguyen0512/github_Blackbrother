@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react'
+import {useState, useEffect, useRef } from 'react'
 
 import { Link, useLocation } from 'react-router-dom'
 
+import { useSelector } from 'react-redux'
 const mainNav = [
   {
     display: 'Home',
@@ -26,6 +27,9 @@ const Header = () => {
 
   const { pathname } = useLocation()
 
+  const cartItems = useSelector(state => state.cartItems.value)
+  
+  const [quantity, setQuantity] = useState(0)
   const activeNav = mainNav.findIndex(e => e.path === pathname)
 
   const headerRef = useRef()
@@ -50,6 +54,10 @@ const Header = () => {
   const menuRight = useRef()
 
   const menuToggle = () => menuRight.current.classList.toggle('active')
+
+  useEffect( () => {
+    setQuantity(cartItems.length)
+  }, [cartItems])
   return (
     <div className="header" ref={headerRef}>
       <div className="container">
@@ -97,6 +105,7 @@ const Header = () => {
             <div className="header__menu__item header__menu__right__item">
               <Link to='/cart'>
                 <i className="fa-solid fa-cart-shopping"></i>
+                <span> ({quantity})</span>
               </Link>
 
             </div>
