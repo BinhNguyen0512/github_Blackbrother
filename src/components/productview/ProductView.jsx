@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react'
 
+import {useDispatch} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
 
 import Button from '../button/Button'
 
 import numberWithCommas from '../../utils/numberWithCommas'
 
+import { addItem } from '../../redux/shopping-cart/cartItemSlice'
 
 const ProductView = props => {
 
   const product = props.product
+
+  const dispatch = useDispatch()
 
 
   const [previewImg, setPreviewImg] = useState(product.image01)
@@ -55,6 +60,31 @@ const ProductView = props => {
 
     return true
   }
+
+  const addToCart = () => {
+    if ((check())) 
+    {
+        dispatch(addItem(
+        {
+          slug: product.slug,
+          price: product.price,
+          color: color,
+          size: size,
+          quantity: quantity
+        }
+      ))
+      alert('success')
+    }
+  
+  }
+  
+  const navigate = useNavigate()
+  const goToCart = () => {
+      if(check()){
+        navigate('/cart')
+      }
+  }
+
   return (
     <div className='product'>
       <div className="product__images">
@@ -81,7 +111,7 @@ const ProductView = props => {
 
           <div className={`product-description ${descriptionExpand ? 'expand' : ''}`}>
               <div className="product-description__title">
-                    Chi tiết sản phẩm
+                    Chi tiết sản phẩm 
               </div>
 
               <div className="product-description__content" dangerouslySetInnerHTML={{__html: product.description}}>
@@ -192,11 +222,15 @@ const ProductView = props => {
           
 
           <div className="product__info__item">
-            <Button>
+            <Button
+              onClick={() => addToCart()}
+            >
               Thêm vào giỏ hàng
             </Button>
 
-            <Button>
+            <Button
+              onClick={() => goToCart()}
+            >
               Mua ngay
             </Button>
           </div>
@@ -223,10 +257,6 @@ const ProductView = props => {
 
 
       </div>
-
-
-      
-      
     </div>
   )
 }

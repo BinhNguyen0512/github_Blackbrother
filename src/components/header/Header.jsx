@@ -95,7 +95,9 @@ const Header = () => {
             </div>
 
             <div className="header__menu__item header__menu__right__item">
-              <i className="fa-solid fa-cart-shopping"></i>
+              <Link to='/cart'>
+                <i className="fa-solid fa-cart-shopping"></i>
+              </Link>
 
             </div>
 

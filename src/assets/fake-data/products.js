@@ -254,18 +254,32 @@ const getProducts = count => {
     const max = products.length - count
     const random = Math.random()
     const start = Math.floor(random * max)
-    console.log(random)
-    console.log(start)
-
+    // console.log(random)
+    // console.log(start)
     return products.slice(start, start + count)
 }
-
 const getProductBySlug = (slug) => products.find(product => product.slug === slug)
+
+const getCartItemsDetail = (cartItems) => {
+    let res = []
+    if(cartItems.length > 0)
+    {
+        cartItems.forEach(e => {
+            res.push({
+                ...e,
+                product: getProductBySlug(e.slug)
+            })
+        })
+    }
+
+    return res
+}
 
 const productData = {
     getAllProducts,
     getProducts,
-    getProductBySlug
+    getProductBySlug,
+    getCartItemsDetail
 }
 
 export default productData
