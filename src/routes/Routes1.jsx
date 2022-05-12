@@ -10,10 +10,10 @@ const Routes1 = () => {
 
     return(
         <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/catalog' element={<Catalog/>}/>
-            <Route path='/catalog/:slug' element={<Product/>} />
-            <Route path='/cart' element={<Cart/>}/>
+            <Route path='/github_Blackbrother/' element={<Home/>}/>
+            <Route path='/github_Blackbrother/catalog' element={<Catalog/>}/>
+            <Route path='/github_Blackbrother/catalog/:slug' element={<Product/>} />
+            <Route path='/github_Blackbrother/cart' element={<Cart/>}/>
         </Routes>
     )
 }

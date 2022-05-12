@@ -6,19 +6,19 @@ import { useSelector } from 'react-redux'
 const mainNav = [
   {
     display: 'Home',
-    path: '/'
+    path: '/github_Blackbrother/'
   },
   {
     display: 'Products',
-    path: '/catalog'
+    path: '/github_Blackbrother/catalog'
   },
   {
     display: 'Blog',
-    path: '/blog'
+    path: '/github_Blackbrother/blog'
   },
   {
     display: 'Contact',
-    path: '/contact'
+    path: '/github_Blackbrother/contact'
   }
 ]
 
@@ -103,7 +103,7 @@ const Header = () => {
             </div>
 
             <div className="header__menu__item header__menu__right__item">
-              <Link to='/cart'>
+              <Link to='/github_Blackbrother/cart'>
                 <i className="fa-solid fa-cart-shopping"></i>
                 <span> ({quantity})</span>
               </Link>
