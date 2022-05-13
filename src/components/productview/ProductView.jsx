@@ -81,7 +81,7 @@ const ProductView = props => {
   const navigate = useNavigate()
   const goToCart = () => {
       if(check()){
-        navigate('/cart')
+        navigate('/github_Blackbrother/cart')
       }
   }
 
