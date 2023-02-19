@@ -14,11 +14,9 @@ const mainNav = [
   },
   {
     display: 'Blog',
-    path: '/github_Blackbrother/blog'
   },
   {
     display: 'Contact',
-    path: '/github_Blackbrother/contact'
   }
 ]
 
@@ -92,7 +90,7 @@ const Header = () => {
                 >
                   <Link to={item.path}>
                     {item.display}
-                  </Link>
+                  </Link> 
                 </div>
               ))
             }
