@@ -64,7 +64,7 @@ const Header = () => {
 
         <div className="header__logo">
           <Link to='/github_Blackbrother/'>
-            MISSOUT
+            BLACKBROTHER
           </Link>
         </div>
 

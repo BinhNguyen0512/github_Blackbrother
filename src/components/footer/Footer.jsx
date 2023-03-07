@@ -61,7 +61,7 @@ const Footer = () => {
 
                 <div>
                     <div className="footer__title">
-                        <h4> Về MISSOUT</h4>
+                        <h4> Về BLACKBROTHER</h4>
                     </div>
 
                     <div className="footer__content">
@@ -92,16 +92,18 @@ const Footer = () => {
                 </div>
 
                 <div className='footer__about'>
-                        <p>
-                            <Link to='/'>
-                                <img src={logo} className='footer__logo' alt="logo" />
+                        <div className="header__logo">
+                            <Link to='/github_Blackbrother/'>
+                                BLACKBROTHER
                             </Link>
-                        </p>
+                        </div>
 
 
-                        <p>
+                        <p style={{
+                            marginTop: '10px'
+                        }}>
                             Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng triệu
-                            người tiêu dùng Việt. Hãy cùng MISSOUT hướng đến một cuộc sống năng động, tích cực hơn.
+                            người tiêu dùng Việt. Hãy cùng BLACKBROTHER hướng đến một cuộc sống năng động, tích cực hơn.
                         </p>
                 </div>
 
