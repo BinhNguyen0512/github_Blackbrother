@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/github_Blackbrother/static/css/main.932e9b50.css",
-    "main.js": "/github_Blackbrother/static/js/main.7f346005.js",
+    "main.js": "/github_Blackbrother/static/js/main.a8884cea.js",
     "static/js/787.17906629.chunk.js": "/github_Blackbrother/static/js/787.17906629.chunk.js",
     "static/media/banner.png": "/github_Blackbrother/static/media/banner.7c81bec39fb724d5b095.png",
     "static/media/product-10 (2).png": "/github_Blackbrother/static/media/product-10 (2).dcee85bae92da9779b8c.png",
@@ -41,11 +41,11 @@
     "static/media/logo.png": "/github_Blackbrother/static/media/logo.0a731170af94596f7dd0.png",
     "index.html": "/github_Blackbrother/index.html",
     "main.932e9b50.css.map": "/github_Blackbrother/static/css/main.932e9b50.css.map",
-    "main.7f346005.js.map": "/github_Blackbrother/static/js/main.7f346005.js.map",
+    "main.a8884cea.js.map": "/github_Blackbrother/static/js/main.a8884cea.js.map",
     "787.17906629.chunk.js.map": "/github_Blackbrother/static/js/787.17906629.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.932e9b50.css",
-    "static/js/main.7f346005.js"
+    "static/js/main.a8884cea.js"
   ]
 }
